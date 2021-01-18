@@ -1,0 +1,198 @@
+.main-footer {
+  padding-top: 40px;
+  background: url("../../assets/images/not-only-bg.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    width: 30%;
+    max-height: 310px;
+    .title {
+      text-align: left;
+      margin-bottom: 44px;
+      color: white;
+    }
+    &--left {
+      .title {
+        max-width: 280px;
+      }
+    }
+    &--left,
+    &--center {
+      padding-top: 17px;
+    }
+    &--center {
+      padding-left: 19px;
+      .title {
+        margin-bottom: 33px;
+        max-width: 280px;
+      }
+      .link {
+        margin-bottom: 37px;
+        &:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      
+    }
+    &--right {
+      text-align: right;
+      img {
+        width: 300px;
+        height: 310px;
+      }
+    }
+
+    
+
+    .link {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 23px;
+      font-family: Georgia, serif;
+      letter-spacing: 0.06em;
+      color: $light-orange;
+      padding-left: 60px;
+      position: relative;
+
+      &--email {
+        margin-bottom: 49px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: 0;
+          display: block;
+          width: 40px;
+          height: 26px;
+          background-image: url('../../assets/icons/mail.svg');
+          background-repeat: no-repeat;
+        }
+        
+      }
+      &--phone {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          margin-top: -17px;
+          left: 0;
+          display: block;
+          width: 40px;
+          height: 32px;
+          background-image: url('../../assets/icons/phone.svg');
+          background-repeat: no-repeat;
+        }
+      }
+      &--pin {
+        padding-left: 41px;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          margin-top: -17px;
+          left: -1px;
+          display: block;
+          width: 22px;
+          height: 32px;
+          background-image: url('../../assets/icons/pin.svg');
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main-footer {
+    padding-top: 31px;
+
+    .container {
+      padding: 0 64px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &__column {
+      padding-top: 0;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      &--left {
+        .title {
+          max-width: 280px;
+        }
+      }
+      &--center {
+        .title {
+          max-width: 280px;
+        }
+      }
+      &--right {
+        width: inherit;
+        margin-top: 69px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-footer {
+    padding-top: 30px;
+
+    .container {
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__column {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+
+      &--left {
+        margin-bottom: 44px;
+        .title {
+          margin-bottom: 45px;
+        }
+      }
+
+      &--center {
+        margin-bottom: 45px;
+        .title {
+          margin-bottom: 40px;
+        }
+        .link {
+          max-width: 300px;
+          width: 100%;
+          margin-bottom: 44px;
+          position: relative;
+          left: 1px;
+          &::before {
+            margin-top: -16px;
+          }
+        }
+      }
+
+      &--right {
+        padding-top: 0;
+        img {
+          width: 260px;
+          height: 269px;
+        }
+      }
+
+      .title {
+        text-align: center;
+        max-width: 250px;
+      }
+    }
+  }
+}

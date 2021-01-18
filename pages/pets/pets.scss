@@ -1,0 +1,229 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/common';
+@import '../../scss/components/main-header';
+@import '../../scss/components/btn';
+@import '../../scss/components/title';
+@import '../../scss/components/text';
+@import '../../scss/components/slider';
+@import '../../scss/components/main-footer';
+@import '../../scss/components/popup';
+
+.main-header {
+  padding-top: 33px;
+  padding-bottom: 28px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: white;
+  transition: background .5s ease-in;
+}
+
+.friends {
+  background-color: $light-gray-bg;
+  padding-top: 201px;
+  padding-bottom: 40px;
+  
+  .title {
+    padding-left: 2px;
+    margin-bottom: 60px;
+  }
+
+  .slider {
+
+    &__list {
+      display: none;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 47px;
+      opacity: 0;
+      animation: fadeout 1s;
+      &--active {
+        display: flex;
+        opacity: 1;
+        animation: fadein 1s;
+      }
+    }
+
+    &__item {
+      margin-bottom: 31px;
+
+      .title {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.main-header.main-header--active {
+  background: transparent;
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .main-header {
+    .container {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .friends {
+    padding-top: 201px;
+    padding-bottom: 76px;
+
+    .title {
+      font-size: 35px;
+      line-height: 45.5px;
+      margin-bottom: 30px;
+    }
+
+    .slider {
+      margin-bottom: 0;
+
+      &__list {
+        justify-content: space-around;
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 27px;
+      }
+
+      &__item {
+        .title {
+          font-size: 20px;
+          line-height: 22.72px;
+          margin-bottom: 31px;
+        }
+        &:nth-child(n + 7) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .main-footer {
+    &__column {
+      .title {
+        font-size: 35px;
+        line-height: 45.5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-header {
+    padding-top: 0 !important;
+    padding-bottom: 29px;
+
+    .hamburger {
+      height: 54px;
+      margin-right: 43px;
+    }
+
+    .navigation {
+      background-color: transparent;
+
+      &__list {
+        padding-top: 50px;
+      }
+    }
+  }
+  
+
+  .friends {
+    padding-top: 162px;
+    padding-bottom: 42px;
+
+    .container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .title {
+      margin-bottom: 43px;
+    }
+
+    .slider {
+      margin-bottom: 0;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      &--big {
+        .slider {
+          &__navigation {
+            &-item {
+              margin-right: 10px;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+      &__list {
+        padding: 0 15px;
+        margin-bottom: 11px;
+      }
+      &__item {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 31px;
+        .title {
+          margin-bottom: 30px;
+        }
+
+        &:nth-child(n + 4) {
+          display: none;
+        }
+      }
+
+      &__navigation {
+        position: relative;
+        top: 0;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.main-header--active.main-header--white {
+  background-color: transparent;
+  .logo {
+    h1 {
+      color: $light-orange;
+    }
+
+    &__undertitle {
+      color: $light-orange;
+    }
+  }
+
+  .hamburger {
+    &__item {
+      background-color: $light-orange;
+    }
+  }
+
+  .navigation {
+    background-color: $black;
+    &__item {
+      a {
+        color: white;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      &--empty {
+        a,
+        a:hover,
+        a:active,
+        a:focus {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

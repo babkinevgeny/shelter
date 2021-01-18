@@ -1,0 +1,39 @@
+.title {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  color: $light-black;
+  text-align: center;
+}
+
+h2.title {
+  font-size: 44px;
+  line-height: 130%;
+}
+
+h3.title {
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+h4.title {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+
+h5.title {
+  font-size: 15px;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 767px) {
+  h2.title,
+  h3.title {
+    font-size: 25px;
+    line-height: 32.5px;
+    letter-spacing: 0.06em;
+  }
+}

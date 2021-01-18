@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelter | Pets page</title>
+    <link rel="stylesheet" href="./pets.css">
+    <script src="pets.js"></script>
+</head>
+<body>
+    <header class="main-header main-header--white">
+        <div class="container">
+            <div class="logo">
+                <a href="../main/index.html">
+                    <h1>Cozy House</h1>
+                    <span class="logo__undertitle">Shelter for pets in Boston</span>
+                </a>
+            </div>
+            <div class="nav-wrapper">
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="../main/index.html">About the shelter</a></li>
+                        <li class="navigation__item"><a class="active" href="./index.html">Our pets</a></li>
+                        <li class="navigation__item navigation__item--empty"><a href="/">Help the shelter</a></li>
+                        <li class="navigation__item navigation__item--empty"><a href="/">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="hamburger__wrapper">
+                    <span class="hamburger__item"></span>
+                    <span class="hamburger__item"></span>
+                    <span class="hamburger__item"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="friends">
+        <div class="container">
+            <h3 class="title">Our friends who <br>are looking for a house</h3>
+            <div class="slider slider--big" id="slider">
+                <div class="slider__navigation">
+                    <button id="btn-to-start" class="slider__navigation-item btn btn--white btn--circle btn--to-start" disabled><<</button>
+                    <button id="btn-prev" class="slider__navigation-item btn btn--white btn--circle btn--prev" disabled><</button>
+                    <button id="btn-number" class="slider__navigation-item btn btn--circle btn--page btn--active">1</button>
+                    <button id="btn-next" class="slider__navigation-item btn btn--white btn--circle btn--next">></button>
+                    <button id="btn-to-end" class="slider__navigation-item btn btn--white btn--circle btn--to-end">>></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="main-footer__column main-footer__column--left">
+                <h3 class="title">For questions and suggestions</h3>
+                <a class="link link--email" href="mailto:email@shelter.com">email@shelter.com</a>
+                <a class="link link--phone" href="tel:+13 674 567 75 54">+13 674 567 75 54</a>
+            </div>
+            <div class="main-footer__column main-footer__column--center">
+                <h3 class="title">We are waiting for your visit</h3>
+                <a class="link link--pin" href="https://goo.gl/maps/Gy9qCSQgMKEVLtsR6">1 Central Street, Boston <br>(entrance from the store)</a>
+                <a class="link link--pin" href="https://goo.gl/maps/7cR6gxmrcqTtPu5H7">18 South Park, London </a>
+            </div>
+            <div class="main-footer__column main-footer__column--right">
+                <img src="../../assets/images/footer-puppy.png" alt="Puppy">
+            </div>
+        </div>
+    </footer>
+    <section class="popup" id="popup">
+        <div class="popup__container">
+            <button type="button" class="btn btn--circle btn--transparent btn--close" id="btn-close-popup"></button>
+            <div class="popup__column popup__column--left">
+                <img src="" alt="">
+            </div>
+            <div class="popup__column popup__column--right">
+                <h3 class="title">Jennifer</h3>
+                <span class="undertitle">
+                    <span id="popup-pet-type"></span> - <span id="popup-breed"></span>
+                </span>
+                <p class="text description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+                <ul class="popup__list">
+                    <li class="popup__item">
+                        <b>Age: </b>
+                        <span id="popup-age"></span>
+                    </li>
+                    <li class="popup__item">
+                        <b>Inoculations: </b>
+                        <span id="popup-inoculations"></span>
+                    </li>
+                    <li class="popup__item">
+                        <b>Diseases: </b>
+                        <span id="popup-diseases"></span>
+                    </li>
+                    <li class="popup__item">
+                        <b>Parasites: </b>
+                        <span id="popup-parasites"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

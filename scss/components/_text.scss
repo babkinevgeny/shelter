@@ -1,0 +1,13 @@
+.text {
+  font-family: Arial;
+  font-size: 15px;
+  line-height: 160%;
+  color: $light-gray;
+  &--italic {
+    font-family: Arial;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 18px;
+    color: $gray-for-italic;
+  }
+}
